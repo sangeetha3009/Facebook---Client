@@ -1,0 +1,81 @@
+<div ng-controller="personal_page">
+<div class="col-md-4">
+</div>
+
+	<div class="col-md-4" >
+		<div class="row" >
+			<div class="well"> 
+			<form>
+				<div>
+				<p>
+					Overview:
+				</p>
+				<p>
+					<input type="text" name="overview" ng-model="overview" value={{overview}}/>
+					<button ng-click="addoverview()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				</div>
+				<div>
+				<p>
+					Work:
+				</p>
+				<p>
+					<input type="text" name="work" ng-model="work"/ value={{work}}>
+					<button ng-click="addwork()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				</div>
+				<div>
+				<p>
+					Where do you live?
+				</p>
+				<p>
+					<input type="text" name="lives_in" ng-model="lives_in"/ value={{lives_in}}>
+					<button ng-click="add_lives_in()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				</div>
+				<div>
+				<p>
+					Where are you from?
+				</p>
+				<p>
+					<input type="text" name="from_place" ng-model="from_place"/ value={{from_place}}>
+					<button ng-click="add_from_place()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				</div>
+				<div>
+				<p>
+					Interests:
+				</p>
+				<p>
+					<input type="text" name="interests" ng-model="interests" value={{interests}}/>
+					<button ng-click="addinterests()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				<p>
+					Contact Info:
+				</p>
+				<p>
+					<input type="text" name="contact" ng-model="contact" value={{contact}}/>
+					<button ng-click="addContact()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				<p>
+					Life Events:
+				</p>
+				<p>
+					<input type="text" name="life" ng-model="life" value={{life}}/>
+					<button ng-click="addLife()" class="btn btn-default" value="Save to Profile">Save to Profile</button>
+				</p>
+				</div>
+				
+				
+								 
+			</form>
+
+			<a href=#about/>Go to Profile!</a>
+			<a href=#news/>  Go to Home</a>
+			
+
+		</div>
+	</div>
+	</div>
+</div>
+	

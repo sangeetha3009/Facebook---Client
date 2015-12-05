@@ -1,0 +1,90 @@
+<!--About content-->                	
+    <div class="col-md-12">                      
+    <!-- content -->                      
+      	<div class="row"> 
+       	<!--cover-->
+           	<div class="panel panel-default" ng-controller="searchcnt" ng-init="initsession()">
+               	<div class="col-md-2">
+                  	<!--one here-->
+				</div>
+				</p>
+                 <div ng-if="user==1" > <h4>Hi!! {{uname}}</h4></div>
+                     <div ng-if="user==0 && uname===token"> <h4>Hi!! {{uname}}</h4></div>
+                      <div class="panel-body">
+                          <div ng-if="user==0 && uname!=token"> 
+                             <h4>Profile of: {{token}}</h4>
+                              <div class="loginbt"><button type="submit" class="btn btn-success" ng-click="addfriend(token,button_val)">{{button_val}}</button></div><br>
+                            </div>
+                       </div>
+                      </div> 
+             <!--cover-->                         
+             
+             <!-- main col left --> 
+             <div class="col-md-4" ng-controller="searchcnt" ng-init="initsession()">        
+				<div class="panel panel-default">
+                	<h4>About</h4>
+                    	 <div class="panel-body">
+                        	<h5>Lives in <a href=#personal_details>{{abt_lives_in}}</a></h5><h6></h6> 
+                                  			       					 
+                        	<h5>From <a href=#personal_details>{{abt_from_place}}</a></h5><h6></p></h6>
+                                 			
+                            <h5>Work <a href=#personal_details>{{abt_work}}</a></h5><h6></p></h6>
+                                 			
+                            <h5>Contact Info <a href=#personal_details>{{abt_contact}}</a></h5><h6></p></h6>
+                                 			
+                            <h5>Life Events <a href=#personal_details>{{abt_life}}</a></h5><h6></p></h6>
+                                 			 
+                          </div>
+                  </div>                         
+
+				<div class="boxi">
+					<h4>Interests</h4>
+						<p><h5> Interests <a href=#personal_details>{{abt_interests}}</a></h5></p>
+						<h6></h6>
+				</div>                           
+                              
+                <div class="panel panel-default">
+                	 <div class="panel-body">
+                        <div class="list-group">
+                     	</div>
+                     </div>
+				</div>   
+                          
+                				                  
+ 				<!--Friends-->                  
+ 				<div class="panel panel-default">
+ 					<h4>Friends</h4>
+					   <div class="panel-body">
+						  <!--> <div ng-repeat="fr in final_list"><!-->
+							<div class="col-md-4">
+      							<!--one here-->
+      							<a href=#/about/{{fr}} class="thumbnail">
+      							<img style="width:250px;height:80px" src="">
+      							{{fr}}
+      							</a>
+							</div>
+						</div>
+					</div>
+				</div>  
+			<!--Friends--> 
+
+	</div> <!--col-md-4--> 
+                          
+	<!-- main col right -->
+	<div class="col-sm-7">                          
+			<!--well-->
+			<div class="well"> 
+				<form class="form-horizontal" role="form">
+					<h4>What's New</h4>
+						<div class="form-group" style="padding:14px;">
+							<textarea class="form-control" placeholder="Update your status"></textarea>
+						</div>
+					<button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+				</form>
+			</div>
+	        <!--well-->
+		</div><!--col-->
+	</div><!-- row -->
+ </div><!--col -->
+
+

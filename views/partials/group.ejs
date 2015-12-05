@@ -1,0 +1,150 @@
+<div class="row">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-5">
+		<div class="well"> 
+        	 <form class="form-horizontal" role="form">
+          		<h4>Welcome to the group, {{grpName}}</h4>
+          			
+           			<div class="form-group" style="padding:14px;">
+           				<p>
+            			<button class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal2">
+            				Add Members
+            			</button>
+            			<button class="btn btn-success" type="button" data-toggle="modal" data-target="#myModal3">
+            				Delete Members
+            			</button>
+            			<button class="btn btn-success" type="button" ng-click="showMembers(grpName)">
+            				Show Members
+            			</button>
+            			
+            			</p>
+            			<p>
+            			<div ng-if="showmem==1">
+						<div class="well">
+						<p><b>The Members are</b></p>
+            			<div ng-repeat="mem in members">{{mem}}</li></div>
+           			  	</div>         
+           			  	</div>   		
+            			</p>
+            				
+           			  	
+           			
+           			  <div class="modal fade" id="myModal2" role="dialog">
+							<div class="modal-dialog">
+					      		
+						      	<div class="modal-content">
+									<div class="modal-header">
+								    	<h4 class="modal-title">Add Members to the Group</h4>								    	
+								     </div>
+									
+									 <div class="modal-body" ng-controller="searchcnt" >
+										<p> 
+										<b><h4>
+											Group Name: {{grpName}}											
+										</h4></b>
+										
+										</p>
+										<p> 
+										<label id="group-style">
+											Members: 
+										</label>
+										<input list="friends" class="input-group input-group-sm" class="form-control" id="searchGroup" placeholder="Enter Friend name" type="text" ng-model="gMember">
+											<datalist id="friends">                     
+								            	<option ng-repeat="friends in final_list" value="{{friends}}"></option>
+								          	</datalist>										       	
+								            	
+								            	</h5>
+								         </p>
+								         <button class="btn btn-default" ng-controller="searchcnt" ng-click="addToGroup(grpName,gMember)">Add to Group</button>
+								         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								       </div>
+								       
+								         
+								         <p>												       
+								         	
+								           	
+								         </p>
+								  	 </div>
+								   </div>
+								</div>
+								<!--delete-->
+								<div class="modal fade" id="myModal3" role="dialog">
+							<div class="modal-dialog">
+					      		
+						      	<div class="modal-content">
+									<div class="modal-header">
+								    	<h4 class="modal-title">Delete Members from the Group</h4>								    	
+								     </div>
+									
+									 <div class="modal-body" ng-controller="searchcnt" >
+										<p> 
+										<b><h4>
+											Group Name: {{grpName}}											
+										</h4></b>
+										
+										</p>
+										<p> 
+										<label id="group-style">
+											Members: 
+										</label>
+										<input list="friends" class="input-group input-group-sm" class="form-control" id="searchGroup" placeholder="Enter Friend name" type="text" ng-model="gMember">
+											<datalist id="friends">                     
+								            	<option ng-repeat="friends in final_list" value="{{friends}}"></option>
+								          	</datalist>										       	
+								            	
+								            	</h5>
+								         </p>
+								         <button class="btn btn-default" ng-controller="searchcnt" ng-click="deleteFromGroup(grpName,gMember)">Delete From Group</button>
+								         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								       </div>
+								       
+								         
+								         <p>												       
+								         	
+								           	
+								         </p>
+								  	 </div>
+								   </div>
+								</div>
+        
+								<!--delete-->
+								<!--Show Members-->
+								<div class="modal fade" id="myModal4" role="dialog">
+							<div class="modal-dialog">
+					      		
+						      	<div class="modal-content">
+									<div class="modal-header">
+								    	<h4 class="modal-title">Show Members from the Group</h4>								    	
+								     </div>
+									
+									 <div class="modal-body" ng-controller="searchcnt" >
+										<p> 
+										<b><h4>
+											Group Name: {{grpName}}											
+										</h4></b>
+										
+										</p>
+										<p> 
+										<label id="group-style">
+											Members: 
+										</label>
+						            	</h5>
+								        </p>
+								         <div ng-repeat="mem in members">{{mem}}</div>
+								         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								       </div>  
+								         
+								         <p>												       
+								         	
+								           	
+								         </p>
+								  	 </div>
+								   </div>
+								</div>
+        
+								<!--Show Members-->
+           			          </div>      			
+           		</form>       
+ 		</div>           
+	</div>
+</div>

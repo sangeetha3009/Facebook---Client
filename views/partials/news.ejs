@@ -1,0 +1,99 @@
+	<div class="col-sm-2">   
+		<div class="container">
+		<a href=#view_profile><button class="btn btn-default">View Profile</button></a></p>
+		<a href=#personal_details><button class="btn btn-default">Edit Profile</button></a></p>
+		
+		<!-- Trigger the modal with a button -->
+			<p><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">Create Group</button></p>
+			<div ng-if="showgroups==1"> <b>Your Groups</b></div>
+			<p>
+			<div style="color:black" ng-repeat="gr in groupList">
+				<p><a href=#/group/{{gr}}>
+					<button class="btn btn-default">{{gr}}</button>
+				</a>
+					<button class="btn btn-default" ng-click="deleteGroup(gr)">Delete Group</button>
+				</p>
+			</div>
+			</p>
+				 <!-- Modal -->
+					  <div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+					      		<!-- Modal content-->
+						      	<div class="modal-content">
+									<div class="modal-header">
+								    	<h4 class="modal-title">Create Group</h4>								    	
+								     </div>
+				
+									 <div class="modal-body" ng-controller="searchcnt" >
+										<p> 
+										<label id="group-style">
+											Group Name: 
+										</label>
+										<input type="text" name="groupname" ng-model="gname" ><br>
+										</p>
+										<p> 
+										<label id="group-style">
+											Members: 
+										</label>
+										<input list="friends"class="input-group input-group-sm" class="form-control" id="searchGroup" placeholder="Enter Friend name" type="text" ng-model="gmem_var">
+											<datalist id="friends">                     
+								            	<option ng-repeat="friends in final_list" value="{{friends}}"></option>
+								          	</datalist>		
+								         </p>
+								         <p>												       
+								         	<button class="btn btn-default" type="submit" ng-controller="searchcnt" ng-click="createGroup(gname,gmem_var)">Create Group</button>
+								           	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								         </p>
+								  	 </div>
+								   </div>
+								</div>
+								
+							</div>
+						</div> 
+								
+          	
+	                
+	                                            		
+	                        </div>  
+	                        <!-- main col left --> 
+	                         <div class="col-sm-5">
+	                          <div class="well"> 
+	                                   <form class="form-horizontal" role="form">
+	                                    <h4>Update status</h4>
+	                                     <div class="form-group" style="padding:14px;">
+	                                      <textarea class="form-control" placeholder="What's on your mind?"></textarea>
+	                                    </div>
+	                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+	                                  </form>
+	                                  
+	                           </div>   
+	                           <!--Newsfeed-->
+	                           <div class="well"> 
+	                           <h4><b>Uber News</b></h4>
+	                                   <form class="form-horizontal" role="form">
+	                                    Uber is evolving the way the world moves. By seamlessly connecting riders to drivers through our apps,
+	                                     we make cities more accessible, opening up more possibilities for riders and more business 
+	                                     for drivers. From our founding in 2009 to our launches in hundreds of cities today,
+	                                      Uber's rapidly expanding global presence continues to bring people and their cities closer.
+	                                  </form>
+	                                  
+	                           </div>       
+	 						<!--Newsfeed-->
+	 						
+	 						 <!--Newsfeed-->
+	                           <div class="well"> 
+	                           <h4><b>Google</b></h4>
+	                                   <form class="form-horizontal" role="form">
+	                                    Google was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.
+	                                     Together they own about 14 percent of its shares but control 56 percent of the stockholder voting power through supervoting stock. 
+	                                    They incorporated Google as a privately held company on September 4, 1998. 
+	                                    An initial public offering followed on August 19, 2004. 
+	                                    Its mission statement from the outset was "to organize the world's information and 
+	                                    make it universally accessible and useful," and its unofficial slogan was "Don't be evil" In 2004, Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex.
+	                                    In August 2015, Google announced plans to reorganize its interests as a holding company called Alphabet Inc.
+	                                    When this restructuring took place on October 2, 2015, Google became Alphabet's leading subsidiary, as well as the parent for Google's Internet interests
+	                                  </form>
+	                                  
+	                           </div>       
+	 						<!--Newsfeed-->
+	                       </div><!--/row-->              
